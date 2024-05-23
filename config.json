@@ -1,0 +1,14 @@
+{
+  "A": "/sbin/notify-send 'ButtonPressed' 'A'",
+  "B": "/sbin/notify-send 'ButtonPressed' 'B'",
+  "DOWN": "/sbin/notify-send 'ButtonPressed' 'DOWN'",
+  "L": "/sbin/notify-send 'ButtonPressed' 'L'",
+  "LEFT": "/sbin/notify-send 'ButtonPressed' 'LEFT'",
+  "R": "/sbin/notify-send 'ButtonPressed' 'R'",
+  "RIGHT": "/sbin/notify-send 'ButtonPressed' 'RIGHT'",
+  "SELECT": "/sbin/notify-send 'ButtonPressed' 'SELECT'",
+  "START": "/sbin/notify-send 'ButtonPressed' 'START'",
+  "UP": "/sbin/notify-send 'ButtonPressed' 'UP'",
+  "X": "/sbin/notify-send 'ButtonPressed' 'X'",
+  "Y": "/sbin/notify-send 'ButtonPressed' 'Y'"
+}
