@@ -113,24 +113,24 @@ type joystickConfig struct {
 	devicePath string
 }
 
-type JoystickOption interface {
+type joystickOption interface {
 	apply(*joystickConfig)
 }
 
-type joystickOption func(*joystickConfig)
+type joystickConfigOption func(*joystickConfig)
 
-func (o joystickOption) apply(c *joystickConfig) {
+func (o joystickConfigOption) apply(c *joystickConfig) {
 	o(c)
 }
 
-func WithConfigPath(configPath string) joystickOption {
-	return joystickOption(func(o *joystickConfig) {
+func WithConfigPath(configPath string) joystickConfigOption {
+	return joystickConfigOption(func(o *joystickConfig) {
 		o.configPath = configPath
 	})
 }
 
-func WithDevicePath(devicePath string) joystickOption {
-	return joystickOption(func(o *joystickConfig) {
+func WithDevicePath(devicePath string) joystickConfigOption {
+	return joystickConfigOption(func(o *joystickConfig) {
 		o.devicePath = devicePath
 	})
 }
@@ -145,7 +145,7 @@ type Joystick struct {
 	pressed          bool
 }
 
-func New(opts ...joystickOption) Joystick {
+func New(opts ...joystickConfigOption) Joystick {
 	c := joystickConfig{
 		devicePath: defaultDevicePath,
 		configPath: configDefaultPath,
